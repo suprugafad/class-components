@@ -117,3 +117,8 @@ button:focus-visible {
   margin: 5px 0;
   font-size: 14px;
 }
+
+.error-boundary {
+  text-align: center;
+  padding: 20px;
+}

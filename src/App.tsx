@@ -1,5 +1,6 @@
 import Results from './components/Results';
 import React from 'react';
+import SearchBar from './components/SearchBar';
 
 interface AppState {
   searchTerm: string;
@@ -19,6 +20,9 @@ class App extends React.Component<object, AppState> {
   render() {
     return (
       <div className="app">
+        <div className="top-section">
+          <SearchBar onSearch={this.handleSearch} />
+        </div>
         <div className="bottom-section">
           <Results searchTerm={this.state.searchTerm} />
         </div>

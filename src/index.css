@@ -1,10 +1,8 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Inter, Arial, sans-serif;
   line-height: 1.5;
-  font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
 
   font-synthesis: none;
@@ -30,11 +28,6 @@ body {
   min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -54,15 +47,49 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.bottom-section {
+  flex: 1 1 auto;
+  padding: 50px;
+  overflow-y: auto;
+}
+
+.results {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: center;
+}
+
+.user-card {
+  background-color: rgb(44, 5, 94);
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 300px;
+  text-align: center;
+  flex: 1 1 calc(33.333% - 40px);
+  box-sizing: border-box;
+}
+
+.user-card img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.user-card h2 {
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+.user-card p {
+  margin: 5px 0;
+  font-size: 14px;
 }
